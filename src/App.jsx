@@ -9,12 +9,9 @@ const App = () => {
     localStorage.getItem(I18N_STORAGE_KEY)
   );
 
-  const handleSelectChange = (event) => {
-    setLanguage(event.target.value);
-    console.log(event.target.value);
-
-    localStorage.setItem(I18N_STORAGE_KEY, event.target.value);
-
+  const handleSelectChange = ({ target: { value } }) => {
+    setLanguage(value);
+    localStorage.setItem(I18N_STORAGE_KEY, value);
     window.location = window.location;
   };
 
@@ -22,6 +19,7 @@ const App = () => {
     <>
       <GlobalStyle />
       <Conteiner>
+        <h1>{language}</h1>
         <Home />
 
         <br />
@@ -30,6 +28,8 @@ const App = () => {
           <option value="pt-BR">PT</option>
           <option value="en-US">EN</option>
           <option value="es-ES">ES</option>
+          <option value="es-ES">ES</option>
+          <option value="zh-CN ">中文</option>
         </select>
       </Conteiner>
     </>

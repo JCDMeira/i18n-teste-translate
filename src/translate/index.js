@@ -16,6 +16,11 @@ const messages = {
       ...homeEs,
     },
   },
+  zh: {
+    translations: {
+      ...homeCh,
+    },
+  },
 };
 
 export { messages };
