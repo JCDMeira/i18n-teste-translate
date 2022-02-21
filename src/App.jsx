@@ -28,7 +28,6 @@ const App = () => {
           <option value="pt-BR">PT</option>
           <option value="en-US">EN</option>
           <option value="es-ES">ES</option>
-          <option value="es-ES">ES</option>
           <option value="zh-CN ">中文</option>
         </select>
       </Conteiner>
