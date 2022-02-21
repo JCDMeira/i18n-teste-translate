@@ -2,22 +2,22 @@ import { homePt, homeEn, homeEs, homeCh } from "../Components/Home/translate";
 
 const messages = {
   en: {
-    translations: {
+    translation: {
       ...homeEn,
     },
   },
   pt: {
-    translations: {
+    translation: {
       ...homePt,
     },
   },
   es: {
-    translations: {
+    translation: {
       ...homeEs,
     },
   },
   zh: {
-    translations: {
+    translation: {
       ...homeCh,
     },
   },

@@ -3,9 +3,7 @@ import Home from "./Components/Home";
 import { Conteiner, GlobalStyle } from "./global";
 
 import i18n from "i18next";
-// import { useTranslation } from "react-i18next";
-
-const I18N_STORAGE_KEY = "i18nextLng";
+import I18N_STORAGE_KEY from "./utils/language-key";
 
 function App() {
   const [language, setLanguage] = useState(
@@ -18,7 +16,7 @@ function App() {
     if (value === "pt-BR") i18n.changeLanguage("pt-BR");
     if (value === "en-US") i18n.changeLanguage("en-US");
     if (value === "es-ES") i18n.changeLanguage("es-ES");
-    if (value === "zh-CH") i18n.changeLanguage("zh-CH");
+    if (value === "zh-CN") i18n.changeLanguage("zh-CN");
   };
 
   return (
@@ -34,7 +32,7 @@ function App() {
           <option value="pt-BR">PT</option>
           <option value="en-US">EN</option>
           <option value="es-ES">ES</option>
-          <option value="zh-CN ">中文</option>
+          <option value="zh-CN">中文</option>
         </select>
       </Conteiner>
     </>
