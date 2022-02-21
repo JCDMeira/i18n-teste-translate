@@ -1,8 +1,10 @@
 import React from "react";
-import useTextTranslate from "../../hooks/useTextTranslate.hook";
+import { useTranslation } from "react-i18next";
 
 function Home() {
-  return <h1> {useTextTranslate("Home", "HELLO")} </h1>;
+  const { t } = useTranslation();
+
+  return <h1> {t("Home.HELLO")} </h1>;
 }
 
 export default Home;

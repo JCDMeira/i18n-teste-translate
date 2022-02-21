@@ -2,23 +2,16 @@ import React, { useState } from "react";
 import Home from "./Components/Home";
 import { Conteiner, GlobalStyle } from "./global";
 
-import i18n from "i18next";
-// import { useTranslation } from "react-i18next";
-
 const I18N_STORAGE_KEY = "i18nextLng";
 
-function App() {
+const App = () => {
   const [language, setLanguage] = useState(
     localStorage.getItem(I18N_STORAGE_KEY || "pt-BR")
   );
 
   const handleSelectChange = ({ target: { value } }) => {
-    localStorage.setItem(I18N_STORAGE_KEY, value);
     setLanguage(value);
-    if (value === "pt-BR") i18n.changeLanguage("pt-BR");
-    if (value === "en-US") i18n.changeLanguage("en-US");
-    if (value === "es-ES") i18n.changeLanguage("es-ES");
-    if (value === "zh-CH") i18n.changeLanguage("zh-CH");
+    localStorage.setItem(I18N_STORAGE_KEY, value);
   };
 
   return (
@@ -39,6 +32,6 @@ function App() {
       </Conteiner>
     </>
   );
-}
+};
 
 export default App;
