@@ -13,10 +13,7 @@ function App() {
   const handleSelectChange = ({ target: { value } }) => {
     localStorage.setItem(I18N_STORAGE_KEY, value);
     setLanguage(value);
-    if (value === "pt-BR") i18n.changeLanguage("pt-BR");
-    if (value === "en-US") i18n.changeLanguage("en-US");
-    if (value === "es-ES") i18n.changeLanguage("es-ES");
-    if (value === "zh-CN") i18n.changeLanguage("zh-CN");
+    i18n.changeLanguage(value);
   };
 
   return (

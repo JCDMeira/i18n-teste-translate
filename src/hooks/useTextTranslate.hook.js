@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
-import { i18n } from "../translate/i18n";
+import { useTranslation } from "react-i18next";
 import * as P from "prop-types";
 
 const useTextTranslate = (componentString, textKey) => {
-  const textTranslated = i18n.t(`${componentString}.${textKey}`);
+  const { t } = useTranslation();
+
+  const textTranslated = t(`${componentString}.${textKey}`);
 
   return textTranslated;
 };
